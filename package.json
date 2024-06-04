@@ -1,0 +1,54 @@
+{
+	"name": "pre-release-checks",
+	"version": "0.0.0",
+	"description": "A very lovely package. Hooray!",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Jolg42/pre-release-checks"
+	},
+	"license": "MIT",
+	"author": {
+		"email": "joel.galeran+npm@gmail.com"
+	},
+	"type": "module",
+	"main": "./lib/index.js",
+	"files": [
+		"lib/",
+		"package.json",
+		"LICENSE.md",
+		"README.md"
+	],
+	"scripts": {
+		"build": "tsup",
+		"format": "prettier .",
+		"lint": "eslint . --max-warnings 0",
+		"prepare": "husky",
+		"tsc": "tsc"
+	},
+	"lint-staged": {
+		"*": "prettier --ignore-unknown --write"
+	},
+	"devDependencies": {
+		"@eslint-community/eslint-plugin-eslint-comments": "^4.3.0",
+		"@eslint/js": "^9.4.0",
+		"@types/eslint-plugin-markdown": "^2.0.2",
+		"eslint": "^9.4.0",
+		"eslint-plugin-jsdoc": "^48.2.7",
+		"eslint-plugin-n": "^17.7.0",
+		"eslint-plugin-regexp": "^2.6.0",
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.5",
+		"prettier": "^3.3.0",
+		"prettier-plugin-curly": "^0.2.1",
+		"prettier-plugin-packagejson": "^2.5.0",
+		"tsup": "^8.1.0",
+		"typescript": "^5.4.5",
+		"typescript-eslint": "^7.12.0"
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"publishConfig": {
+		"provenance": true
+	}
+}
