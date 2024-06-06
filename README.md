@@ -32,7 +32,7 @@ await runChecks();
 
 ### Why?
 
-This is a script for our current release process, documented in [Notion](https://www.notion.so/prismaio/Prisma-ORM-Code-Release-Process-88cb8e87e1ab4358bb8ff77c70a5e330)
+This is a script for Prisma ORM release process, documented in [a (private) Notion page](https://www.notion.so/prismaio/Prisma-ORM-Code-Release-Process-88cb8e87e1ab4358bb8ff77c70a5e330)
 
 ### Improvements
 
@@ -42,7 +42,5 @@ This is a script for our current release process, documented in [Notion](https:/
 - add check for engines CI/CD (currently https://buildkite.com/prisma/release-prisma-engines/builds?branch=main)
 - ...
 - Any ideas?
-
-<!-- You can remove this notice if you don't want it 🙂 no worries! -->
 
 > 💙 This package was templated with [`create-typescript-app`](https://github.com/JoshuaKGoldberg/create-typescript-app).
