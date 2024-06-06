@@ -17,6 +17,7 @@
 		"pre-release-checks-js": "./bin/index.js"
 	},
 	"files": [
+		"src/",
 		"bin/",
 		"lib/",
 		"package.json",
