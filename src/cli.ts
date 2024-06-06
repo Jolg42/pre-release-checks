@@ -40,20 +40,6 @@ export const runChecks = async () => {
 	const tasks = new Listr<Ctx>(
 		[
 			{
-				title: "Checking version of Prisma ORM packages on npm (latest)",
-				task: async (ctx, task) => {
-					ctx.versionLatest = await getVersion(ctx, "latest");
-					task.title = `Prisma ORM packages on npm (latest): ${kleur.bold(ctx.versionLatest)}`;
-				},
-			},
-			{
-				title: "Checking version of Prisma CLI on npm (dev)",
-				task: async (ctx, task) => {
-					ctx.versionDev = await getVersion(ctx, "dev");
-					task.title = `Prisma ORM packages on npm (dev): ${kleur.bold(ctx.versionDev)}`;
-				},
-			},
-			{
 				title: "Checking npm status",
 				task: async (_, task) => {
 					const data = await fetch(SERVICES_STATUS.npm.json).then((res) =>
@@ -77,6 +63,20 @@ export const runChecks = async () => {
 					} else {
 						task.title = `GitHub status: ${data.status.description} (indicator = "${data.status.indicator}") -> ${terminalLink("Status page", SERVICES_STATUS.github.html)}`;
 					}
+				},
+			},
+			{
+				title: "Checking version of Prisma ORM packages on npm (latest)",
+				task: async (ctx, task) => {
+					ctx.versionLatest = await getVersion(ctx, "latest");
+					task.title = `Prisma ORM packages on npm (latest): ${kleur.bold(ctx.versionLatest)}`;
+				},
+			},
+			{
+				title: "Checking version of Prisma CLI on npm (dev)",
+				task: async (ctx, task) => {
+					ctx.versionDev = await getVersion(ctx, "dev");
+					task.title = `Prisma ORM packages on npm (dev): ${kleur.bold(ctx.versionDev)}`;
 				},
 			},
 			{
