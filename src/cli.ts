@@ -73,14 +73,14 @@ export const runChecks = async () => {
 				},
 			},
 			{
-				title: "Checking version of Prisma CLI on npm (dev)",
+				title: "Checking version of Prisma ORM packages on npm (dev)",
 				task: async (ctx, task) => {
 					ctx.versionDev = await getVersion(ctx, "dev");
 					task.title = `Prisma ORM packages on npm (dev): ${kleur.bold(ctx.versionDev)}`;
 				},
 			},
 			{
-				title: "Check GitHub Actions workflows",
+				title: "Check GitHub Actions workflows...",
 				task: (ctx, parentTask): Listr =>
 					parentTask.newListr<Ctx>(
 						[
