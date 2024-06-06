@@ -9,6 +9,15 @@
 	<img alt="💪 TypeScript: Strict" src="https://img.shields.io/badge/%F0%9F%92%AA_typescript-strict-21bb42.svg" />
 </p>
 
+## Prerequisites
+
+- `tsx`
+  ```term
+  npm i -g tsx
+  ```
+- [GitHub CLI](https://github.com/cli/cli#installation) or `GITHUB_TOKEN` env var
+  - on macOS: `brew install gh`
+
 ## Usage
 
 ```shell
@@ -27,6 +36,7 @@ This is a script for our current release process, documented in [Notion](https:/
 
 ### Improvements
 
+- Publish on npm?
 - add post release checks
 - handle patch release (needs prompt / input)
 - add check for engines CI/CD (currently https://buildkite.com/prisma/release-prisma-engines/builds?branch=main)
