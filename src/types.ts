@@ -1,5 +1,7 @@
-export interface GreetOptions {
-	logger?: (message: string) => void;
-	message: string;
-	times?: number;
+import { Octokit } from "octokit";
+
+export interface Ctx {
+	versionLatest: string;
+	versionDev: string;
+	octokit: Octokit;
 }

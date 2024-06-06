@@ -1,6 +1,6 @@
 <h1 align="center">Pre Release Checks</h1>
 
-<p align="center">A very lovely package. Hooray!</p>
+<p align="center">One lovely command</p>
 
 <p align="center">
 	<a href="https://github.com/Jolg42/pre-release-checks/blob/main/.github/CODE_OF_CONDUCT.md" target="_blank"><img alt="🤝 Code of Conduct: Kept" src="https://img.shields.io/badge/%F0%9F%A4%9D_code_of_conduct-kept-21bb42" /></a>
@@ -12,14 +12,26 @@
 ## Usage
 
 ```shell
-npm i pre-release-checks
+npx Jolg42/pre-release-checks
 ```
 
 ```ts
-import { greet } from "pre-release-checks";
+import { runChecks } from "pre-release-checks";
 
-greet("Hello, world! 💖");
+await runChecks();
 ```
+
+### Why?
+
+This is a script for our current release process, documented in [Notion](https://www.notion.so/prismaio/Prisma-ORM-Code-Release-Process-88cb8e87e1ab4358bb8ff77c70a5e330)
+
+### Improvements
+
+- add post release checks
+- handle patch release (needs prompt / input)
+- add check for engines CI/CD (currently https://buildkite.com/prisma/release-prisma-engines/builds?branch=main)
+- ...
+- Any ideas?
 
 <!-- You can remove this notice if you don't want it 🙂 no worries! -->
 
