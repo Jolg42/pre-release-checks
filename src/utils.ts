@@ -33,7 +33,7 @@ export const getMessageForWorkflowRun = (
 	unsuccessfulJobs: Endpoints["GET /repos/{owner}/{repo}/actions/runs/{run_id}/jobs"]["response"]["data"]["jobs"],
 	workflowRun: Endpoints["GET /repos/{owner}/{repo}/actions/runs"]["response"]["data"]["workflow_runs"][0],
 ) =>
-	`❌ ${logPrefix} The latest run ${kleur.italic(workflowRun.display_title!)}) conclusion is ${workflowRun.conclusion}.\nSee ${terminalLink("latest run", workflowRun.html_url)}\n${getMessageForUnsuccessfulJobs(unsuccessfulJobs)}`;
+	`❌ ${logPrefix} The latest run ${kleur.italic(workflowRun.display_title!)}) conclusion is ${workflowRun.conclusion}.\nSee ${terminalLink("latest run", workflowRun.html_url)} -> ${getMessageForUnsuccessfulJobs(unsuccessfulJobs)}`;
 
 export const getOutputFile = async (data: ArrayBuffer) => {
 	const directory = await unzipper.Open.buffer(Buffer.from(data));

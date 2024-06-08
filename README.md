@@ -30,6 +30,16 @@ import { runChecks } from "pre-release-checks";
 await runChecks();
 ```
 
+### Locally
+
+```sh
+npx pre-release-checks
+
+# or in 2 different terminals
+pnpm build --watch
+npx pre-release-checks-js
+```
+
 ### Why?
 
 This is a script for Prisma ORM release process, documented in [a (private) Notion page](https://www.notion.so/prismaio/Prisma-ORM-Code-Release-Process-88cb8e87e1ab4358bb8ff77c70a5e330)

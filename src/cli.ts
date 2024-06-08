@@ -24,13 +24,6 @@ export const runChecks = async () => {
 			`Running checks... based on ${terminalLink("Notion document", "https://www.notion.so/prismaio/Prisma-ORM-Code-Release-Process-88cb8e87e1ab4358bb8ff77c70a5e330")}\n`,
 		),
 	);
-	console.warn(
-		kleur
-			.bold()
-			.yellow(
-				"⚠️ This script is still in development and does not yet cover all checks.\n",
-			),
-	);
 
 	// Default owner and repo
 	const owner = "prisma";
